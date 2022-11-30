@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="310.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.gb.perov.calculator.CalculatorController">
+    <MenuBar prefHeight="25.0" prefWidth="229.0">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" text="Close"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+            <MenuItem mnemonicParsing="false" text="About"/>
+        </Menu>
+    </MenuBar>
+    <TextField fx:id="output" alignment="CENTER_RIGHT" editable="false" layoutX="15.0" layoutY="34.0" prefHeight="46.0"
+               prefWidth="200.0">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </TextField>
+    <FlowPane layoutX="15.0" layoutY="93.0" prefHeight="204.0" prefWidth="200.0">
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="7"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="8"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="9"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="/"
+                textAlignment="CENTER" textFill="#ff00d9">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="4"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="5"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="6"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="*"
+                textAlignment="CENTER" textFill="#03bf00">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="1"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="2"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="3"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="–"
+                textAlignment="CENTER" textFill="#2b00ff">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="C"
+                textAlignment="CENTER" textFill="RED">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="0"
+                textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="=" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+        <Button onAction="#inputDigit" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="+"
+                textAlignment="CENTER" textFill="RED">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Button>
+    </FlowPane>
+</AnchorPane>
