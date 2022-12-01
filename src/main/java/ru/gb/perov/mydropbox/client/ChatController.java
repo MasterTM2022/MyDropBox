@@ -17,6 +17,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 
 public class ChatController implements Initializable {
@@ -56,7 +59,10 @@ public class ChatController implements Initializable {
     }
 
     public void updateDir() {
-        if (path.getText().equals("Select directory...") || Objects.equals(path.getText(), "") || path.getText() == null || !Files.exists(Path.of(path.getText()))) {
+        if (path.getText().equals("Select directory...") ||
+                Objects.equals(path.getText(), "") ||
+                path.getText() == null ||
+                !Files.exists(Path.of(path.getText()))) {
             changeDir();
         }
         File dir = new File(path.getText());
@@ -65,14 +71,6 @@ public class ChatController implements Initializable {
             if (file.isFile())
                 fileListView.getItems().add(file.getName());
         }
-//надо разобраться как это работает вместо for (File file : Objects.requireNonNull(dir.listFiles()))
-//        try {
-//            Files.walk(Paths.get(String.valueOf(dir)))
-//                    .filter(Files::isRegularFile)
-//                    .collect(Collectors.toList());
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
     }
 
     public void changeDir() {

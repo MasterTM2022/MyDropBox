@@ -6,10 +6,11 @@ import java.nio.charset.StandardCharsets;
 
 public class Handler implements Runnable {
     private boolean running;
-    private byte[] buf;
-    private InputStream is;
-    private OutputStream os;
-    private Socket socket;
+    private final Socket socket;
+    private final byte[] buf;
+    private final InputStream is;
+    private final OutputStream os;
+    private final static String pathStorage = "files/server/";
 
 
     public Handler(Socket socket) throws IOException {

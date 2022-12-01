@@ -13,6 +13,7 @@ public class IoNet implements Closeable {
     private final OutputStream os;
     private final byte[] buf;
 
+
     public IoNet(Callback callback, Socket socket) throws IOException {
         this.callback = callback;
         this.socket = socket;
@@ -32,7 +33,7 @@ public class IoNet implements Closeable {
     private void readMessages() {
         try {
             while (true) {
-                int read = 0;
+                int read;
                 read = is.read(buf);
                 String msg = new String(buf, 0, read).trim();
                 callback.onReceive(msg);
@@ -47,14 +48,14 @@ public class IoNet implements Closeable {
         byte[] buf = new byte[8192];
 //        long start = Instant.now().getEpochSecond();
         try (FileInputStream is = new FileInputStream(file)) {
-            int read;
-            try (FileOutputStream os = new FileOutputStream(file.getName())) {
-                while ((read = is.read(buf)) != -1) {
-                    os.write(buf, 0, read);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+//            int read;
+//            try (FileOutputStream os = new FileOutputStream(file.getName())) {
+//                while ((read = is.read(buf)) != -1) {
+//                    os.write(buf, 0, read);
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
         } catch (Exception e) {
             e.printStackTrace();
         }
