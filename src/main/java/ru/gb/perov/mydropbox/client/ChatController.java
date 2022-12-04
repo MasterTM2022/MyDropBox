@@ -1,10 +1,8 @@
 package ru.gb.perov.mydropbox.client;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Window;
 
@@ -16,10 +14,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.toList;
 
 
 public class ChatController implements Initializable {
@@ -27,11 +23,12 @@ public class ChatController implements Initializable {
     public ListView<String> listView;
     public ListView<String> fileListView;
     public TextField path;
+    public Button sendFile;
     private IoNet net;
     private Window stage;
 
 
-    public void sendMsg(ActionEvent actionEvent) throws IOException {
+    public void sendMsg() throws IOException {
         net.sendMsg(input.getText());
         input.clear();
     }
@@ -52,10 +49,14 @@ public class ChatController implements Initializable {
         }
     }
 
-    public void sendfile(ActionEvent actionEvent) {
-        Path fullPath = Paths.get(path.getText(), "/", fileListView.getSelectionModel().getSelectedItem());
-        File file = new File(String.valueOf(fullPath));
-        net.sendFile(file);
+    public void sendfile() {
+        if (fileListView.getSelectionModel().getSelectedItem() == null) {
+            showNotification();
+        } else {
+            Path fullPath = Paths.get(path.getText(), "/", fileListView.getSelectionModel().getSelectedItem());
+            File file = new File(String.valueOf(fullPath));
+            net.sendFile(file);
+        }
     }
 
     public void updateDir() {
@@ -86,5 +87,19 @@ public class ChatController implements Initializable {
         }
 
         updateDir();
+    }
+
+    private void showNotification() {
+        final Alert alert = new Alert(Alert.AlertType.ERROR,
+                "File not selected. Try again.",
+                new ButtonType("Ok", ButtonBar.ButtonData.OK_DONE)
+//                new ButtonType("Выйти", ButtonBar.ButtonData.CANCEL_CLOSE)
+        );
+        alert.setTitle("File not selected");
+        final Optional<ButtonType> answer = alert.showAndWait();
+        final Boolean inExit = answer.map(select -> select.getButtonData().isCancelButton()).orElse(false);
+        if (inExit) {
+            System.exit(0);
+        }
     }
 }

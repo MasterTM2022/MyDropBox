@@ -5,103 +5,106 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="406.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.gb.perov.mydropbox.client.ChatController">
+<AnchorPane prefHeight="406.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.gb.perov.mydropbox.client.ChatController">
     <HBox layoutY="25.0" prefHeight="381.0" prefWidth="569.0">
         <VBox prefHeight="360.0" prefWidth="280.0">
             <ListView fx:id="listView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="240.0">
                 <VBox.margin>
-                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
                 </VBox.margin>
                 <padding>
-                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
                 </padding>
             </ListView>
             <TextField fx:id="input" onAction="#sendMsg" prefHeight="25.0" prefWidth="296.0">
                 <VBox.margin>
-                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
                 </VBox.margin>
                 <padding>
-                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
                 </padding>
             </TextField>
             <HBox.margin>
-                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
             </HBox.margin>
             <padding>
-                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
             </padding>
         </VBox>
         <VBox fillWidth="false" prefHeight="360.0" prefWidth="280.0" spacing="2.0">
             <opaqueInsets>
-                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
             </opaqueInsets>
             <padding>
-                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
             </padding>
             <HBox.margin>
-                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
             </HBox.margin>
-         <HBox prefHeight="5.0" prefWidth="272.0">
-               <TextField fx:id="path" editable="false" prefHeight="25.0" prefWidth="246.0" promptText="Path" text="Select directory...">
-                  <padding>
-                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                  </padding>
-                  <HBox.margin>
-                     <Insets bottom="2.0" right="2.0" top="2.0" />
-                  </HBox.margin>
-               </TextField>
-               <Button fx:id="changeDir" mnemonicParsing="false" onAction="#changeDir" prefHeight="25.0" prefWidth="13.0" text="...">
-                  <font>
-                     <Font name="System Bold" size="12.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets bottom="2.0" left="4.0" right="2.0" top="2.0" />
-                  </HBox.margin>
-               </Button>
-            <VBox.margin>
-               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-            </VBox.margin>
-            <padding>
-               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-            </padding>
-         </HBox>
-                <ListView fx:id="fileListView" prefHeight="258.0" prefWidth="272.0">
-                    <VBox.margin>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                    </VBox.margin>
+            <HBox prefHeight="5.0" prefWidth="272.0">
+                <TextField fx:id="path" editable="false" prefHeight="25.0" prefWidth="246.0" promptText="Path"
+                           text="Select directory...">
                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
                     </padding>
-                </ListView>
-                <HBox prefHeight="63.0" prefWidth="273.0" spacing="2.0">
-                        <Button fx:id="sendFile" mnemonicParsing="false" onAction="#sendfile" text="Send file">
-                            <padding>
-                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                            </padding>
-                        </Button>
-                        <Button fx:id="updateDir" mnemonicParsing="false" onAction="#updateDir" text="Update list">
-                            <padding>
-                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                            </padding>
-                            <HBox.margin>
-                                <Insets left="153.0" />
-                            </HBox.margin>
-                        </Button>
-                    <VBox.margin>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                    </VBox.margin>
+                    <HBox.margin>
+                        <Insets bottom="2.0" right="2.0" top="2.0"/>
+                    </HBox.margin>
+                </TextField>
+                <Button fx:id="changeDir" mnemonicParsing="false" onAction="#changeDir" prefHeight="25.0"
+                        prefWidth="13.0" text="...">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="4.0" right="2.0" top="2.0"/>
+                    </HBox.margin>
+                </Button>
+                <VBox.margin>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </HBox>
+            <ListView fx:id="fileListView" prefHeight="258.0" prefWidth="272.0">
+                <VBox.margin>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </ListView>
+            <HBox prefHeight="63.0" prefWidth="273.0" spacing="2.0">
+                <Button fx:id="sendFile" mnemonicParsing="false" onAction="#sendfile" text="Send file">
                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
                     </padding>
-                </HBox>
+                </Button>
+                <Button fx:id="updateDir" mnemonicParsing="false" onAction="#updateDir" text="Update list">
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </padding>
+                    <HBox.margin>
+                        <Insets left="153.0"/>
+                    </HBox.margin>
+                </Button>
+                <VBox.margin>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </HBox>
         </VBox>
     </HBox>
     <MenuBar prefHeight="25.0" prefWidth="535.0">
         <Menu mnemonicParsing="false" text="File">
-            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Close"/>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
-            <MenuItem mnemonicParsing="false" text="About" />
+            <MenuItem mnemonicParsing="false" text="About"/>
         </Menu>
     </MenuBar>
 </AnchorPane>

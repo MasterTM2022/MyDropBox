@@ -8,7 +8,10 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
+
 public class ClientApp extends Application {
+
+
 
     @Override
     public void start(Stage stage) throws Exception {
