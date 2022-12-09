@@ -1,4 +1,4 @@
-package ru.gb.perov.mydropbox.server;
+package ru.gb.perov.mydropboxIO.server;
 
 import java.io.IOException;
 import java.net.ServerSocket;

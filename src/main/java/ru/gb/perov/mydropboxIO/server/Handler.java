@@ -1,4 +1,4 @@
-package ru.gb.perov.mydropbox.server;
+package ru.gb.perov.mydropboxIO.server;
 
 import java.io.*;
 import java.net.Socket;
@@ -11,7 +11,7 @@ public class Handler implements Runnable {
     private final InputStream is;
     private final OutputStream os;
 
-    private final static String pathStorage = "files/server/";
+    private final static String pathStorage = "files/server/"; //папка должна быть создана заранее, проверка на ее существование не предусмотрена
 
 
     public Handler(Socket socket) throws IOException {

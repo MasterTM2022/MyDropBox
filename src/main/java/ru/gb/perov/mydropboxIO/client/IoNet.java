@@ -1,6 +1,5 @@
-package ru.gb.perov.mydropbox.client;
+package ru.gb.perov.mydropboxIO.client;
 
-import javax.xml.crypto.Data;
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;

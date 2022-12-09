@@ -1,4 +1,4 @@
-package ru.gb.perov.mydropbox.client;
+package ru.gb.perov.mydropboxIO.client;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
